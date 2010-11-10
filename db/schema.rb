@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101027082541) do
+ActiveRecord::Schema.define(:version => 20101110100623) do
 
   create_table "audfat_advices", :force => true do |t|
     t.integer  "country_id",                    :null => false
@@ -27,6 +27,14 @@ ActiveRecord::Schema.define(:version => 20101027082541) do
     t.string   "url",            :null => false
     t.date     "last_issued_on"
     t.integer  "last_scrape_id", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "iso3166_countries", :force => true do |t|
+    t.string   "official_short_name", :null => false
+    t.string   "name",                :null => false
+    t.string   "code",                :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
