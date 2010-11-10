@@ -16,11 +16,11 @@ namespace :scrape do
           small_words = ['OF', 'AND', 'THE', 'DA', 'D', 'S']
           name = official_short_name.split(/\b/).map{ |w| w.is_in?(small_words) ? w.downcase : w.capitalize }.join()
           name.sub!(/^./)       { |m| m.upcase }
-          name.sub!(/\, \w/)    { |m| m.upcase }
-          name.sub!(/Mcdonald/) { |m| 'McDonald' }
-          name.sub!(/U\.s\./i)  { |m| 'U.S.' }
-          name.gsub!(/Ô/)       { |m| 'ô' } # Côte d'Ivoire
-          name.gsub!(/É/)       { |m| 'é' } # Réunion, Saint Barthélemy
+          name.sub!(/\, \w/)    { |m| m.upcase }   # "Macedonia, The Former Yugoslav Republic of"
+          name.sub!(/Mcdonald/) { |m| 'McDonald' } # Heard Island and McDonald Islands
+          name.sub!(/U\.s\./i)  { |m| 'U.S.' }     # "Virgin Islands, U.S."
+          name.gsub!(/Ô/)       { |m| 'ô' }        # Côte d'Ivoire
+          name.gsub!(/É/)       { |m| 'é' }        # Réunion, Saint Barthélemy
           ISO3166Country.create!({
             :official_short_name => official_short_name,
             :name => name,
