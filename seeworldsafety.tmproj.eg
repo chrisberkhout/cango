@@ -10,9 +10,11 @@
 			<key>name</key>
 			<string>seeworldsafety</string>
 			<key>regexFileFilter</key>
-			<string>!(.*\.(min\.js|tmproj|gz|tgz)|production\.sql)|(^|/)\..*$</string>
+			<string>!(.*\.(min\.js|tmproj|gz|tgz|sqlite3)|production\.sql)|(^|/)\..*$</string>
 			<key>regexFolderFilter</key>
 			<string>!(public/ext|vendor|log|tmp|backups)|(.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle)))$</string>
+			<key>selected</key>
+			<true/>
 			<key>sourceDirectory</key>
 			<string></string>
 		</dict>
@@ -24,6 +26,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{604, 228}, {1116, 830}}</string>
+	<string>{{208, 228}, {1116, 830}}</string>
 </dict>
 </plist>
