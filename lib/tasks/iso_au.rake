@@ -28,6 +28,10 @@ namespace :iso do
       ISOCountry.all.each { |c| puts "    #{c.official_short_name}" if c.au_countries.count == 0 }
       puts "\nAU COUNTRIES NOT LINKED TO ANY ISO COUNTRY:"
       AUCountry.all.each { |c| puts "    #{c.name}" if c.iso_countries.count == 0 }
+      puts "\nISO COUNTRIES LINKED TO SEVERAL AU COUNTRIES:"
+      ISOCountry.all.each { |c| puts "    #{c.official_short_name}: #{c.au_countries.map{|i| "'#{i.name}'" }.join(', ')}" if c.au_countries.count > 1 }
+      puts "\nAU COUNTRIES LINKED TO SEVERAL ISO COUNTRIES:"
+      AUCountry.all.each { |c| puts "    #{c.name}: #{c.iso_countries.map{|i| "'#{i.official_short_name}'" }.join(', ')}" if c.iso_countries.count > 1 }
     end
     
   end
