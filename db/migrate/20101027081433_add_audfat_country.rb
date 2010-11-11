@@ -1,6 +1,6 @@
-class AddAudfatCountry < ActiveRecord::Migration
+class AddAuCountry < ActiveRecord::Migration
   def self.up
-    create_table :audfat_countries do |t|
+    create_table :au_countries do |t|
       t.string   :name,            :null => false
       t.string   :url,             :null => false
       t.date     :last_issued_on
@@ -11,6 +11,6 @@ class AddAudfatCountry < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :audfat_countries
+    drop_table :au_countries
   end
 end

@@ -1,2 +1,2 @@
-class ISO3166Scrape < Scrape
+class ISOScrape < Scrape
 end

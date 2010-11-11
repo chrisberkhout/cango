@@ -1,2 +1,2 @@
-class ISO3166Country < ActiveRecord::Base
+class ISOCountry < ActiveRecord::Base
 end

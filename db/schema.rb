@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(:version => 20101110100623) do
 
-  create_table "audfat_advices", :force => true do |t|
+  create_table "au_advices", :force => true do |t|
     t.integer  "country_id",                    :null => false
     t.string   "area",                          :null => false
     t.boolean  "overall",    :default => false, :null => false
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 20101110100623) do
     t.datetime "updated_at"
   end
 
-  create_table "audfat_countries", :force => true do |t|
+  create_table "au_countries", :force => true do |t|
     t.string   "name",           :null => false
     t.string   "url",            :null => false
     t.date     "last_issued_on"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(:version => 20101110100623) do
     t.datetime "updated_at"
   end
 
-  create_table "iso3166_countries", :force => true do |t|
+  create_table "iso_countries", :force => true do |t|
     t.string   "official_short_name", :null => false
     t.string   "name",                :null => false
     t.string   "code",                :null => false

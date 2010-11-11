@@ -5,9 +5,9 @@ namespace :scrape do
   desc 'Update the Australian DFAT data'
   task :au => :environment do
     
-    scrape = AUDFATScrape.create!(:started_at => Time.now, :successful => false)
+    scrape = AUScrape.create!(:started_at => Time.now, :successful => false)
     
-    AUDFATScrape.transaction do
+    AUScrape.transaction do
       index_url = 'http://www.smartraveller.gov.au/zw-cgi/view/Advice/'
     
       Nokogiri::HTML(open(index_url)).css('div#alphaTOC a.topicTitle').each do |country_node|
@@ -16,16 +16,16 @@ namespace :scrape do
         next if country_name.is_in? ['General Advice to Australian Travellers', 'Travelling by Sea']
         country_url = index_url + country_node[:href]
         issue_date = country_node.parent.parent.css('span.issueDate').text.strip.map { |s| s.blank? ? nil : Date.strptime(s, '%d/%m/%Y') }.first
-        country = AUDFATCountry.where(:name => country_name).first || AUDFATCountry.new(:name => country_name)
+        country = AUCountry.where(:name => country_name).first || AUCountry.new(:name => country_name)
 
         printf "#{country_name.upcase}: "
         if country.last_issued_on != issue_date then
           puts "advice from #{country_url}, issued on #{issue_date}:"
           Nokogiri::HTML(open(country_url)).css('table#alertContinuii th.alertLocation').each do |area_node|
             area = area_node.text.strip
-            level = AUDFATLevel[area_node.parent.parent.css('td.currentAlertLevel').first.text.strip]
-            puts "     #{AUDFATLevel[level]} in #{area}."
-            country.advices << AUDFATAdvice.new(
+            level = AULevel[area_node.parent.parent.css('td.currentAlertLevel').first.text.strip]
+            puts "     #{AULevel[level]} in #{area}."
+            country.advices << AUAdvice.new(
               :area => area,
               :overall => area[/ overall$/].present?,
               :issued_on => issue_date,
@@ -55,7 +55,7 @@ namespace :scrape do
     puts "--------------------------------------------------------------------------------"
     puts " Structural changes in #{scrape.type} \##{scrape.id}, started at #{scrape.started_at}"
     puts "--------------------------------------------------------------------------------"
-    AUDFATCountry.all.each do |c| 
+    AUCountry.all.each do |c| 
       if c.not_in? scrape.countries 
         # missing_countries << c 
         puts "The country #{c.name.upcase} was not found in this scrape!"

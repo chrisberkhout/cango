@@ -1,6 +1,6 @@
-class AddAudfatAdvice < ActiveRecord::Migration
+class AddAuAdvice < ActiveRecord::Migration
   def self.up
-    create_table :audfat_advices do |t|
+    create_table :au_advices do |t|
       t.integer  :country_id, :null => false
       t.string   :area,       :null => false
       t.boolean  :overall,    :null => false, :default => false
@@ -12,6 +12,6 @@ class AddAudfatAdvice < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :audfat_advices
+    drop_table :au_advices
   end
 end

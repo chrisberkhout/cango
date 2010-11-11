@@ -5,12 +5,12 @@ namespace :scrape do
   desc 'Load the ISO3166 country list or check it for changes'
   task :iso => :environment do
     
-    scrape = ISO3166Scrape.create!(:started_at => Time.now, :successful => false)
-    ISO3166Scrape.transaction do
+    scrape = ISOScrape.create!(:started_at => Time.now, :successful => false)
+    ISOScrape.transaction do
       url = 'http://www.iso.org/iso/list-en1-semic-3.txt'
       lines = open(url).readlines.map{ |l| Iconv.conv("UTF-8","ISO-8859-1",l).chomp }[1..-1].reject{ |l| l.blank? }
 
-      if ISO3166Country.count == 0
+      if ISOCountry.count == 0
         lines.each do |l|
           official_short_name, code = l.split(';')
           small_words = ['OF', 'AND', 'THE', 'DA', 'D', 'S']
@@ -21,7 +21,7 @@ namespace :scrape do
           name.sub!(/U\.s\./i)  { |m| 'U.S.' }     # "Virgin Islands, U.S."
           name.gsub!(/Ô/)       { |m| 'ô' }        # Côte d'Ivoire
           name.gsub!(/É/)       { |m| 'é' }        # Réunion, Saint Barthélemy
-          ISO3166Country.create!({
+          ISOCountry.create!({
             :official_short_name => official_short_name,
             :name => name,
             :code => code,
@@ -29,11 +29,11 @@ namespace :scrape do
         end
         puts "#{lines.count} Countries have been loaded from the ISO3166 list."
       else
-        existing_lines = ISO3166Country.all.map{ |c| "#{c.official_short_name};#{c.code}" }
+        existing_lines = ISOCountry.all.map{ |c| "#{c.official_short_name};#{c.code}" }
         removed_lines = existing_lines.select{ |l| l.not_in?(lines) }
         added_lines   = lines.select{ |l| l.not_in?(existing_lines) }
         if removed_lines.count + added_lines.count == 0 then
-          puts "There have been no changes to the ISO3166 list of #{ISO3166Country.count} countries."
+          puts "There have been no changes to the ISO3166 list of #{ISOCountry.count} countries."
         else
           puts "These countries in the database have been removed from ISO3166:\n#{removed_lines.join("\n")}" if removed_lines.present?
           puts "These countries from ISO3166 have not been loaded into the database:\n#{added_lines.join("\n")}" if added_lines.present?

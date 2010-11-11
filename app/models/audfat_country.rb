@@ -1,10 +1,10 @@
-class AUDFATCountry < ActiveRecord::Base
+class AUCountry < ActiveRecord::Base
 
-  has_many   :advices,     :class_name => 'AUDFATAdvice', :foreign_key => :country_id
-  belongs_to :last_scrape, :class_name => 'AUDFATScrape', :foreign_key => :last_scrape_id
+  has_many   :advices,     :class_name => 'AUAdvice', :foreign_key => :country_id
+  belongs_to :last_scrape, :class_name => 'AUScrape', :foreign_key => :last_scrape_id
 
   def last_advices
-    AUDFATAdvice.where(:country_id => id, :issued_on => last_issued_on)
+    AUAdvice.where(:country_id => id, :issued_on => last_issued_on)
   end
   
   def last_overall_advice
