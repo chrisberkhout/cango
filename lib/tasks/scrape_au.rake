@@ -2,7 +2,7 @@ require 'nokogiri'
 require 'open-uri'
 
 namespace :scrape do
-  desc 'Update the Australian DFAT data'
+  desc 'Load or update the Australian DFAT data'
   task :au => :environment do
     
     scrape = AUScrape.create!(:started_at => Time.now, :successful => false)

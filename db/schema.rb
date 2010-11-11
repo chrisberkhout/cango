@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101110100623) do
+ActiveRecord::Schema.define(:version => 20101111102158) do
 
   create_table "au_advices", :force => true do |t|
     t.integer  "country_id",                    :null => false
@@ -30,6 +30,13 @@ ActiveRecord::Schema.define(:version => 20101110100623) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "au_countries_iso_countries", :id => false, :force => true do |t|
+    t.integer "au_country_id",  :null => false
+    t.integer "iso_country_id", :null => false
+  end
+
+  add_index "au_countries_iso_countries", ["au_country_id", "iso_country_id"], :name => "au_iso_unique", :unique => true
 
   create_table "iso_countries", :force => true do |t|
     t.string   "official_short_name", :null => false

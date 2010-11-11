@@ -1,0 +1,215 @@
+# ISO3166 official short names for countries (in uppercase) and AU (DFAT) country names.
+AFGHANISTAN;Afghanistan
+ÅLAND ISLANDS;Finland
+ALBANIA;Albania
+ALGERIA;Algeria
+AMERICAN SAMOA;American Samoa
+ANDORRA;Andorra
+ANGOLA;Angola
+ANTIGUA AND BARBUDA;Antigua and Barbuda
+ARGENTINA;Argentina
+ARMENIA;Armenia
+ARUBA;Aruba
+AUSTRIA;Austria
+AZERBAIJAN;Azerbaijan
+BAHAMAS;The Bahamas
+BAHRAIN;Bahrain
+BANGLADESH;Bangladesh
+BARBADOS;Barbados
+BELARUS;Belarus
+BELGIUM;Belgium
+BELIZE;Belize
+BENIN;Benin
+BHUTAN;Bhutan
+BOLIVIA, PLURINATIONAL STATE OF;Bolivia
+BOSNIA AND HERZEGOVINA;Bosnia and Herzegovina
+BOTSWANA;Botswana
+BRAZIL;Brazil
+BRUNEI DARUSSALAM;Brunei Darussalam
+BULGARIA;Bulgaria
+BURKINA FASO;Burkina Faso
+BURUNDI;Burundi
+CAMBODIA;Cambodia
+CAMEROON;Cameroon
+CANADA;Canada
+CAPE VERDE;Cape Verde
+CENTRAL AFRICAN REPUBLIC;Central African Republic
+CHAD;Chad
+CHILE;Chile
+CHINA;China
+COLOMBIA;Colombia
+COMOROS;Comoros
+CONGO;The Republic of the Congo
+CONGO, THE DEMOCRATIC REPUBLIC OF THE;Democratic Republic of the Congo
+COOK ISLANDS;Cook Islands
+COSTA RICA;Costa Rica
+CÔTE D'IVOIRE;Côte d’Ivoire
+CROATIA;Croatia
+CUBA;Cuba
+CYPRUS;Cyprus
+CZECH REPUBLIC;Czech Republic
+DENMARK;Denmark
+DJIBOUTI;Djibouti
+DOMINICA;Dominica
+DOMINICAN REPUBLIC;Dominican Republic
+ECUADOR;Ecuador
+EGYPT;Egypt
+EL SALVADOR;El Salvador
+EQUATORIAL GUINEA;Equatorial Guinea
+ERITREA;Eritrea
+ESTONIA;Estonia
+ETHIOPIA;Ethiopia
+FIJI;Fiji
+FINLAND;Finland
+FRANCE;France
+FRENCH POLYNESIA;French Polynesia
+GABON;Gabon
+GAMBIA;The Gambia
+GEORGIA;Georgia
+GERMANY;Germany
+GHANA;Ghana
+GIBRALTAR;Gibraltar
+GREECE;Greece
+GREENLAND;Greenland
+GRENADA;Grenada
+GUAM;Guam
+GUATEMALA;Guatemala
+GUINEA;Guinea
+GUINEA-BISSAU;Guinea-Bissau
+GUYANA;Guyana
+HAITI;Haiti
+HOLY SEE (VATICAN CITY STATE);Italy
+HONDURAS;Honduras
+HONG KONG;Hong Kong
+HUNGARY;Hungary
+ICELAND;Iceland
+INDIA;India
+INDONESIA;Indonesia
+IRAN, ISLAMIC REPUBLIC OF;Iran
+IRAQ;Iraq
+IRELAND;Ireland
+ISRAEL;Israel, the Gaza Strip and the West Bank
+ITALY;Italy
+JAMAICA;Jamaica
+JAPAN;Japan
+JORDAN;Jordan
+KAZAKHSTAN;Kazakhstan
+KENYA;Kenya
+KIRIBATI;Kiribati
+KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF;Democratic People's Republic of Korea
+KOREA, REPUBLIC OF;Republic of Korea
+KUWAIT;Kuwait
+KYRGYZSTAN;Kyrgyz Republic
+LAO PEOPLE'S DEMOCRATIC REPUBLIC;Laos
+LATVIA;Latvia
+LEBANON;Lebanon
+LESOTHO;Lesotho
+LIBERIA;Liberia
+LIBYAN ARAB JAMAHIRIYA;Libya
+LIECHTENSTEIN;Liechtenstein
+LITHUANIA;Lithuania
+LUXEMBOURG;Luxembourg
+MACAO;Macau
+MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF;The former Yugoslav Republic of Macedonia
+MADAGASCAR;Madagascar
+MALAWI;Malawi
+MALAYSIA;Malaysia
+MALDIVES;Maldives
+MALI;Mali
+MALTA;Malta
+MARSHALL ISLANDS;Marshall Islands
+MAURITANIA;Mauritania
+MAURITIUS;Mauritius
+MEXICO;Mexico
+MICRONESIA, FEDERATED STATES OF;Federated States of Micronesia
+MOLDOVA, REPUBLIC OF;Moldova
+MONACO;Monaco
+MONGOLIA;Mongolia
+MONTENEGRO;Montenegro
+MOROCCO;Morocco
+MOZAMBIQUE;Mozambique
+MYANMAR;Burma
+NAMIBIA;Namibia
+NAURU;Nauru
+NEPAL;Nepal
+NETHERLANDS;Netherlands
+NETHERLANDS ANTILLES;Netherlands Antilles
+NEW CALEDONIA;New Caledonia
+NEW ZEALAND;New Zealand
+NICARAGUA;Nicaragua
+NIGER;Niger
+NIGERIA;Nigeria
+NIUE;Niue
+NORTHERN MARIANA ISLANDS;Northern Mariana Islands
+NORWAY;Norway
+OMAN;Oman
+PAKISTAN;Pakistan
+PALAU;Palau
+PALESTINIAN TERRITORY, OCCUPIED;Israel, the Gaza Strip and the West Bank
+PANAMA;Panama
+PAPUA NEW GUINEA;Papua New Guinea
+PARAGUAY;Paraguay
+PERU;Peru
+PHILIPPINES;Philippines
+POLAND;Poland
+PORTUGAL;Portugal
+PUERTO RICO;Puerto Rico
+QATAR;Qatar
+RÉUNION;Reunion
+ROMANIA;Romania
+RUSSIAN FEDERATION;Russia
+RWANDA;Rwanda
+SAINT KITTS AND NEVIS;Saint Kitts and Nevis
+SAINT LUCIA;Saint Lucia
+SAINT VINCENT AND THE GRENADINES;Saint Vincent and the Grenadines
+SAMOA;Samoa
+SAN MARINO;San Marino
+SAO TOME AND PRINCIPE;Sao Tome and Principe
+SAUDI ARABIA;Saudi Arabia
+SENEGAL;Senegal
+SERBIA;Kosovo
+SERBIA;Serbia
+SEYCHELLES;Seychelles
+SIERRA LEONE;Sierra Leone
+SINGAPORE;Singapore
+SLOVAKIA;Slovakia
+SLOVENIA;Slovenia
+SOLOMON ISLANDS;Solomon Islands
+SOMALIA;Somalia
+SOUTH AFRICA;South Africa
+SPAIN;Spain
+SRI LANKA;Sri Lanka
+SUDAN;Sudan
+SURINAME;Suriname
+SWAZILAND;Swaziland
+SWEDEN;Sweden
+SWITZERLAND;Switzerland
+SYRIAN ARAB REPUBLIC;Syria
+TAIWAN, PROVINCE OF CHINA;Taiwan
+TAJIKISTAN;Tajikistan
+TANZANIA, UNITED REPUBLIC OF;Tanzania
+THAILAND;Thailand
+TIMOR-LESTE;East Timor
+TOGO;Togo
+TONGA;Tonga
+TRINIDAD AND TOBAGO;Trinidad and Tobago
+TUNISIA;Tunisia
+TURKEY;Turkey
+TURKMENISTAN;Turkmenistan
+TUVALU;Tuvalu
+UGANDA;Uganda
+UKRAINE;Ukraine
+UNITED ARAB EMIRATES;United Arab Emirates
+UNITED KINGDOM;United Kingdom
+UNITED STATES;United States of America
+URUGUAY;Uruguay
+UZBEKISTAN;Uzbekistan
+VANUATU;Vanuatu
+VENEZUELA, BOLIVARIAN REPUBLIC OF;Venezuela
+VIET NAM;Vietnam
+VIRGIN ISLANDS, U.S.;United States of America
+WALLIS AND FUTUNA;Wallis and Futuna
+WESTERN SAHARA;Morocco
+YEMEN;Yemen
+ZAMBIA;Zambia
+ZIMBABWE;Zimbabwe
