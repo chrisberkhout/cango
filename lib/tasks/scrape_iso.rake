@@ -18,7 +18,7 @@ namespace :scrape do
           name.sub!(/^./)       { |m| m.upcase }
           name.sub!(/\, \w/)    { |m| m.upcase }   # "Macedonia, The Former Yugoslav Republic of"
           name.sub!(/Mcdonald/) { |m| 'McDonald' } # Heard Island and McDonald Islands
-          name.sub!(/U\.s\./i)  { |m| 'U.S.' }     # "Virgin Islands, U.S."
+          name.sub!(/U\.s\./)   { |m| 'U.S.' }     # "Virgin Islands, U.S."
           name.gsub!(/Ô/)       { |m| 'ô' }        # Côte d'Ivoire
           name.gsub!(/É/)       { |m| 'é' }        # Réunion, Saint Barthélemy
           ISOCountry.create!({

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101111102158) do
+ActiveRecord::Schema.define(:version => 20101111143833) do
 
   create_table "au_advices", :force => true do |t|
     t.integer  "country_id",                    :null => false
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20101111102158) do
     t.string   "code",                :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "borders_kml"
   end
 
   create_table "scrapes", :force => true do |t|

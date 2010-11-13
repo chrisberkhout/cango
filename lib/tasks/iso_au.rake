@@ -3,7 +3,7 @@ namespace :iso do
     
     desc 'Load links between the ISO and AU country lists'
     task :load => :environment do
-      filename = 'db/links/links_iso_au.txt'
+      filename = 'db/data/iso_au.txt'
       puts "Loading links between the ISO and AU country lists from '#{filename}'..."
       open(filename).readlines.each do |l|
         next if l[/^\#/].present? || l.blank?
