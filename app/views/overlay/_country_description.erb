@@ -1,11 +1,10 @@
 
 <% country.au_countries.each do |c| %>
-    <br/>
     <% c.last_advices.each do |a| %>
         Advice for <%= a.area %>:<br/>
         <strong><%= AULevel[a.level] %></strong><br/>
+        <br/>
     <% end %>
-    <br/>
     For more information, please refer to the <br/>
     <a href="<%= c.url %>">DFAT travel page for <%= c.name %></a>.<br/>
 <% end %>
