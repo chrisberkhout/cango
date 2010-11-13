@@ -5,6 +5,14 @@
 	<key>documents</key>
 	<array>
 		<dict>
+			<key>filename</key>
+			<string>/users/chrisberkhout/Projects/DFATTravelAdviceMashup/notes.txt</string>
+			<key>lastUsed</key>
+			<date>2010-11-13T05:51:37Z</date>
+			<key>saveAsAbsolutePath</key>
+			<true/>
+		</dict>
+		<dict>
 			<key>expanded</key>
 			<true/>
 			<key>name</key>
@@ -20,12 +28,12 @@
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
-	<integer>200</integer>
+	<integer>253</integer>
 	<key>metaData</key>
 	<dict/>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{208, 228}, {1116, 830}}</string>
+	<string>{{337, 228}, {940, 830}}</string>
 </dict>
 </plist>
