@@ -1,4 +1,9 @@
 SeeWorldSafety::Application.routes.draw do
+
+  resources :comments
+  match 'overlay/data.:format' => 'overlay#data', :as => :overlay
+  root :to => 'landing#index', :as => :index
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -50,10 +55,6 @@ SeeWorldSafety::Application.routes.draw do
   # just remember to delete public/index.html.
   # root :to => "welcome#index"
   
-  match 'overlay/data.:format' => 'overlay#data', :as => :overlay
-  
-  
-
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

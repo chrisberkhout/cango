@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101111143833) do
+ActiveRecord::Schema.define(:version => 20101118120652) do
 
   create_table "au_advices", :force => true do |t|
     t.integer  "country_id",                    :null => false
@@ -37,6 +37,21 @@ ActiveRecord::Schema.define(:version => 20101111143833) do
   end
 
   add_index "au_countries_iso_countries", ["au_country_id", "iso_country_id"], :name => "au_iso_unique", :unique => true
+
+  create_table "comments", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "comments_iso_countries", :id => false, :force => true do |t|
+    t.integer "comment_id",     :null => false
+    t.integer "iso_country_id", :null => false
+  end
+
+  add_index "comments_iso_countries", ["comment_id", "iso_country_id"], :name => "comment_iso_unique", :unique => true
 
   create_table "iso_countries", :force => true do |t|
     t.string   "official_short_name", :null => false
