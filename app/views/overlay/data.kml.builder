@@ -12,7 +12,7 @@ xml.kml(:xmlns => 'http://earth.google.com/kml/2.2') do
       {:id => 'style_5', :line_color => 'cc000000', :poly_color => 'bf0000ff'} 
     ].each do |style|
       xml.Style(:id => style[:id]) do
-        xml.BalloonStyle { xml.text { xml.cdata!( render(:partial => 'balloon_style') ) } }
+        xml.BalloonStyle { xml.text { xml.cdata!( render(:partial => 'balloon_style.html') ) } }
         xml.ListStyle
         xml.LineStyle do
           xml.color(style[:line_color])
@@ -29,8 +29,8 @@ xml.kml(:xmlns => 'http://earth.google.com/kml/2.2') do
   
       @countries.each do |country|
         xml.Placemark do
-          xml.name(country.name)
-          xml.description { xml.cdata!(render(:partial => "country_description", :object => country, :as => :country)) }
+          xml.name(country.name + Time.now.to_s)
+          xml.description { xml.cdata!(render(:partial => "country_description.html", :object => country, :as => :country)) }
           xml.styleUrl('#style_' + country.au_countries.map{ |c| c.last_overall_advice && c.last_overall_advice.level }.max.to_s)
           xml << country.borders_kml+"\n"
         end
