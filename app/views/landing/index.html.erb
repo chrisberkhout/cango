@@ -33,8 +33,25 @@
     <h1>Here's a map:</h1>
     <div id="map_canvas" style="width:1000px; height:550px"></div>
 
+    <h2>Recent comments</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Body</th>
+        </tr>
+        <% @comments.each do |comment| %>
+            <tr>
+                <td><%= comment.name %></td>
+                <td><%= comment.email %></td>
+                <td><%= comment.body %></td>
+            </tr>
+        <% end %>
+    </table>
+
     <h2>New comment</h2>
     <%= render 'shared/comment_form' %>
+
 </body>
 
 </html>
