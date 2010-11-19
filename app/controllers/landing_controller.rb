@@ -1,5 +1,8 @@
 class LandingController < ApplicationController
+  respond_to :html
+  
   def index
-    render :layout => false
+    @comment = Comment.new
+    respond_with @comment
   end
 end
