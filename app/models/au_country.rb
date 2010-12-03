@@ -6,7 +6,7 @@ class AUCountry < ActiveRecord::Base
   has_and_belongs_to_many :iso_countries, :class_name => 'ISOCountry'
 
   def last_advices
-    AUAdvice.where(:country_id => id, :issued_on => last_issued_on)
+    advices.where(:issued_on => last_issued_on)
   end
   
   def last_overall_advice
