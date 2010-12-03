@@ -1,36 +1,11 @@
-<%= form_for(@comment) do |f| %>
-  <% if @comment.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
-
-      <ul>
-      <% @comment.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= f.label :iso_country %><br />
-    <!-- <%= f.collection_select 'iso_country_ids', ISOCountry.all, :id, :name, { :include_blank => true } %> -->
-    <%= select_tag "comment[iso_country_ids]", options_from_collection_for_select(ISOCountry.all, :id, :name), :multiple => true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= semantic_form_for @comment do |form| %>
+   <%= form.inputs do %>
+     <%= form.input :name, :required => true %>
+     <%= form.input :email, :required => true %>
+     <%= form.input :body, :required => true %>
+     <%= form.input :iso_countries, :as => :select, :include_blank => '-- None in particular --', :label => 'Related countries' %>
+   <% end %>
+   <%= form.buttons do %>
+     <%= form.commit_button %>
+   <% end %>
 <% end %>
