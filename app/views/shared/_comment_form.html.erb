@@ -1,7 +1,7 @@
 <%= semantic_form_for @comment do |form| %>
    <%= form.inputs do %>
-     <%= form.input :name, :required => true %>
-     <%= form.input :email, :required => true %>
+     <%= form.input :name %>
+     <%= form.input :email %>
      <%= form.input :body, :required => true %>
      <%= form.input :iso_countries, :as => :select, :include_blank => '-- None in particular --', :label => 'Related countries' %>
    <% end %>

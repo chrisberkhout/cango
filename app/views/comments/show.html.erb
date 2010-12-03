@@ -15,6 +15,10 @@
   <%= @comment.body %>
 </p>
 
+<p>
+  <b>Related countries:</b>
+  <%= @comment.iso_countries.map{|c| "\"#{c.name}\""}.join(', ') %>
+</p>
 
 <%= link_to 'Edit', edit_comment_path(@comment) %> |
 <%= link_to 'Back', comments_path %>
