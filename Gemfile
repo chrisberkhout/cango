@@ -14,6 +14,7 @@ gem 'rails', '3.0.3'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'nokogiri'
 gem 'active_enum'
+gem 'validation_reflection'
 gem 'formtastic', '~> 1.2'
 
 # Bundle gems for the local environment. Make sure to
