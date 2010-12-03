@@ -22,7 +22,8 @@
 
   <div class="field">
     <%= f.label :iso_country %><br />
-    <%= f.select :iso_country_ids, ISOCountry.all.map {|c| [ c.name, c.id ] }, { :include_blank => true } %>
+    <!-- <%= f.collection_select 'iso_country_ids', ISOCountry.all, :id, :name, { :include_blank => true } %> -->
+    <%= select_tag "comment[iso_country_ids]", options_from_collection_for_select(ISOCountry.all, :id, :name), :multiple => true %>
   </div>
 
   <div class="field">
