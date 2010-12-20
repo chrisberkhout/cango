@@ -1,4 +1,4 @@
-SeeWorldSafety::Application.routes.draw do
+CanGo::Application.routes.draw do
 
   resources :comments
   match 'overlay/data.:format' => 'overlay#data', :as => :overlay

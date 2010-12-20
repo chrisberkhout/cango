@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-SeeWorldSafety::Application.load_tasks
+CanGo::Application.load_tasks
