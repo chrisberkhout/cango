@@ -43,7 +43,7 @@ CONGO;The Republic of the Congo
 CONGO, THE DEMOCRATIC REPUBLIC OF THE;Democratic Republic of the Congo
 COOK ISLANDS;Cook Islands
 COSTA RICA;Costa Rica
-CÔTE D'IVOIRE;Côte d’Ivoire
+CÔTE D'IVOIRE;Côte d'Ivoire
 CROATIA;Croatia
 CUBA;Cuba
 CYPRUS;Cyprus

@@ -29,7 +29,7 @@ xml.kml(:xmlns => 'http://earth.google.com/kml/2.2') do
   
       @countries.each do |country|
         xml.Placemark do
-          xml.name(country.name + Time.now.to_s)
+          xml.name(country.name)
           xml.description { xml.cdata!(render(:partial => "country_description.html", :object => country, :as => :country)) }
           xml.styleUrl('#style_' + country.au_countries.map{ |c| c.last_overall_advice && c.last_overall_advice.level }.max.to_s)
           xml << country.borders_kml+"\n"
