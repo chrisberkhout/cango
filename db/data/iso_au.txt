@@ -133,7 +133,7 @@ NAMIBIA;Namibia
 NAURU;Nauru
 NEPAL;Nepal
 NETHERLANDS;Netherlands
-NETHERLANDS ANTILLES;Netherlands Antilles
+# NETHERLANDS ANTILLES;Netherlands Antilles
 NEW CALEDONIA;New Caledonia
 NEW ZEALAND;New Zealand
 NICARAGUA;Nicaragua
